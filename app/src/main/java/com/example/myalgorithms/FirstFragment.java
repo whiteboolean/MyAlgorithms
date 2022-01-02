@@ -21,6 +21,8 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
+
+
         binding = FragmentFirstBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
