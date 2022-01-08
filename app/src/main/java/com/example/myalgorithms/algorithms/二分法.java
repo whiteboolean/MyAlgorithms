@@ -1,5 +1,7 @@
 package com.example.myalgorithms.algorithms;
 
+import java.util.HashMap;
+
 /**
  * 二分查找 - 折半查找：
  * <p>
@@ -18,6 +20,8 @@ public class 二分法 {
 
         int i = biSearch(arr, 45);
         System.out.println(i);
+
+
     }
 
 
