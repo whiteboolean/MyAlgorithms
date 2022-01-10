@@ -5,11 +5,11 @@ package com.example.myalgorithms.algorithms;
  * value - 数据域
  * listNoe - 指针域
  */
-public class ListNode {
+public class ListNode链表反转 {
     Object value;
-    ListNode next;
+    ListNode链表反转 next;
 
-    public ListNode(Object value, ListNode next) {
+    public ListNode链表反转(Object value, ListNode链表反转 next) {
         this.value = value;
         this.next = next;
     }
@@ -19,17 +19,18 @@ public class ListNode {
 
         public static void main(String[] args) {
 
-            ListNode node5 = new ListNode(5, null);
-            ListNode node4 = new ListNode(4, node5);
-            ListNode node3 = new ListNode(3, node4);
-            ListNode node2 = new ListNode(2, node3);
-            ListNode node = new ListNode(1, node2);
+            ListNode链表反转 node5 = new ListNode链表反转(5, null);
+            ListNode链表反转 node4 = new ListNode链表反转(4, node5);
+            ListNode链表反转 node3 = new ListNode链表反转(3, node4);
+            ListNode链表反转 node2 = new ListNode链表反转(2, node3);
+            ListNode链表反转 node = new ListNode链表反转(1, node2);
             printListNode(node);
-            ListNode newHead = reverseList(node);
+            ListNode链表反转 newHead = reverseList(node);
             System.out.println("反转链表");
             printListNode(newHead);
 //            performSelf(modCount);
         }
+
 
         private static int modCount = 3;
 
@@ -45,7 +46,7 @@ public class ListNode {
         }
 
 
-        private static void printListNode(ListNode head) {
+        private static void printListNode(ListNode链表反转 head) {
             if (head == null) return;
 
             System.out.println("NodeValue:" + head.value);
@@ -62,13 +63,13 @@ public class ListNode {
      *
      * 1 -> 2 -> 3 -> 4 -> 5 -> null
      */
-    public static ListNode reverseList(ListNode head) {
+    public static ListNode链表反转 reverseList(ListNode链表反转 head) {
         Object headValue = head.value;
         if (head == null || head.next == null)
             return head;
         Object headNext = head.next.value;
-        ListNode next = head.next;
-        ListNode new_head = reverseList(next);
+        ListNode链表反转 next = head.next;
+        ListNode链表反转 new_head = reverseList(next);
         Object nextValue = next.value;
         next.next = head;
         head.next = null;
