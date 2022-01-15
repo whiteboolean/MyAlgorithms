@@ -43,5 +43,23 @@ public class 二分法 {
         return -1; //找不到
     }
 
+    public static int biSearch2(int[] arr, int a) {
+        int start = 0 ;
+        int end = arr.length-1;
+        int mid ;
+        while (start<=end){
+            mid = (start + end)/2;
+            if (arr[mid]<a){
+                start = mid+1;
+            } else if (arr[end]>a){
+                end = mid - 1;
+            } else{
+                return mid;
+            }
+        }
+        return -1; //找不到
+    }
+
+
 
 }
