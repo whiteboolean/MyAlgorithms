@@ -1,5 +1,7 @@
 package com.example.myalgorithms.algorithms;
 
+import android.util.ArrayMap;
+
 /**
  * 单链表
  * value - 数据域
@@ -29,6 +31,9 @@ public class ListNode链表反转 {
             System.out.println("反转链表");
             printListNode(newHead);
 //            performSelf(modCount);
+
+            ArrayMap<String,String> arrayMap = new ArrayMap<>();
+
         }
 
 
