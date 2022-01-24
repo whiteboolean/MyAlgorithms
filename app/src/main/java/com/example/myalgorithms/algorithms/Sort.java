@@ -16,7 +16,7 @@ package com.example.myalgorithms.algorithms;
  * 9.计数排序
  * 10.桶排序
  */
-public class 排序算法 {
+public class Sort {
 
     public static void main(String[] args) {
         int[] arr = {3, 6, 5, 2, 9, 8, 4, 1, 7};

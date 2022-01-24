@@ -10,7 +10,7 @@ import java.util.HashMap;
  *
  * 有序数组中，找某个数是否存在 O(log2N)
  */
-public class 二分法 {
+public class BinarySearch {
 
     private int[] arrays = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 

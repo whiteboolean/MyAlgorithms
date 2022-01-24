@@ -7,11 +7,11 @@ import android.util.ArrayMap;
  * value - 数据域
  * listNoe - 指针域
  */
-public class ListNode链表反转 {
+public class ListNodeReserve {
     Object value;
-    ListNode链表反转 next;
+    ListNodeReserve next;
 
-    public ListNode链表反转(Object value, ListNode链表反转 next) {
+    public ListNodeReserve(Object value, ListNodeReserve next) {
         this.value = value;
         this.next = next;
     }
@@ -21,13 +21,13 @@ public class ListNode链表反转 {
 
         public static void main(String[] args) {
 
-            ListNode链表反转 node5 = new ListNode链表反转(5, null);
-            ListNode链表反转 node4 = new ListNode链表反转(4, node5);
-            ListNode链表反转 node3 = new ListNode链表反转(3, node4);
-            ListNode链表反转 node2 = new ListNode链表反转(2, node3);
-            ListNode链表反转 node = new ListNode链表反转(1, node2);
+            ListNodeReserve node5 = new ListNodeReserve(5, null);
+            ListNodeReserve node4 = new ListNodeReserve(4, node5);
+            ListNodeReserve node3 = new ListNodeReserve(3, node4);
+            ListNodeReserve node2 = new ListNodeReserve(2, node3);
+            ListNodeReserve node = new ListNodeReserve(1, node2);
             printListNode(node);
-            ListNode链表反转 newHead = reverseList(node);
+            ListNodeReserve newHead = reverseList(node);
             System.out.println("反转链表");
             printListNode(newHead);
 //            performSelf(modCount);
@@ -51,7 +51,7 @@ public class ListNode链表反转 {
         }
 
 
-        private static void printListNode(ListNode链表反转 head) {
+        private static void printListNode(ListNodeReserve head) {
             if (head == null) return;
 
             System.out.println("NodeValue:" + head.value);
@@ -68,13 +68,13 @@ public class ListNode链表反转 {
      *
      * 1 -> 2 -> 3 -> 4 -> 5 -> null
      */
-    public static ListNode链表反转 reverseList(ListNode链表反转 head) {
+    public static ListNodeReserve reverseList(ListNodeReserve head) {
         Object headValue = head.value;
         if (head == null || head.next == null)
             return head;
         Object headNext = head.next.value;
-        ListNode链表反转 next = head.next;
-        ListNode链表反转 new_head = reverseList(next);
+        ListNodeReserve next = head.next;
+        ListNodeReserve new_head = reverseList(next);
         Object nextValue = next.value;
         next.next = head;
         head.next = null;
