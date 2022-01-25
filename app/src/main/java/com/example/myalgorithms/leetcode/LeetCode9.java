@@ -1,14 +1,13 @@
 package com.example.myalgorithms.leetcode;
 
 /**
- *
  * 判断一个树是否是回文数
- *
  */
 public class LeetCode9 {
 
     public static void main(String[] args) {
-        boolean palindrome = isPalindrome(1000021);
+
+        boolean palindrome = isPalindrome(11);
         System.out.println(palindrome);
 
     }
@@ -40,13 +39,15 @@ public class LeetCode9 {
 
 
         //todo 待研究
-        if (x == 0) return true;
-        if (x < 0 || x % 10 == 0) return false;
-        int reversed = 0;
-        while (x > reversed) {
-            reversed = reversed * 10 + x % 10;
-            x /= 10;
+        if (x < 0)
+            return false;
+        int rem, y = 0;
+        int quo = x;
+        while (quo != 0) {
+            rem = quo % 10;
+            y = y * 10 + rem;
+            quo = quo / 10;
         }
-        return x == reversed || x == reversed / 10;
+        return y == x;
     }
 }
