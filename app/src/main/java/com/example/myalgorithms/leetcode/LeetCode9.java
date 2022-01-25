@@ -33,6 +33,8 @@ public class LeetCode9 {
 //        sb.reverse();
 //        return sb.toString().equals(x + "");
 
+
+        //todo 待研究
         if (x == 0) return true;
         if (x < 0 || x % 10 == 0) return false;
         int reversed = 0;
