@@ -28,27 +28,27 @@ public class ListNodeReserve {
             ListNodeReserve node = new ListNodeReserve(1, node2);
             printListNode(node);
             ListNodeReserve newHead = reverseList(node);
-            System.out.println("反转链表");
+            System.out.println("----- 反转链表 ------");
             printListNode(newHead);
-//            performSelf(modCount);
+//            performSelf(modCounts);
 
-            ArrayMap<String,String> arrayMap = new ArrayMap<>();
+//            ArrayMap<String,String> arrayMap = new ArrayMap<>();
 
         }
 
 
-        private static int modCount = 3;
-
-        private static int performSelf(int modCount) {
-            System.out.println("modCount:" + modCount);
-            modCount--;
-            if (modCount <= 0) {
-                return modCount;
-            }
-            int self = performSelf(modCount);
-            System.out.println("self:" + self + ",modCount:" + modCount);
-            return self;
-        }
+//        private static final int modCounts = 3;
+//
+//        private static int performSelf(int modCount) {
+//            System.out.println("modCount:" + modCount);
+//            modCount--;
+//            if (modCount <= 0) {
+//                return modCount;
+//            }
+//            int self = performSelf(modCount);
+//            System.out.println("self:" + self + ",modCount:" + modCount);
+//            return self;
+//        }
 
 
         private static void printListNode(ListNodeReserve head) {
@@ -69,13 +69,10 @@ public class ListNodeReserve {
      * 1 -> 2 -> 3 -> 4 -> 5 -> null
      */
     public static ListNodeReserve reverseList(ListNodeReserve head) {
-        Object headValue = head.value;
         if (head == null || head.next == null)
             return head;
-        Object headNext = head.next.value;
         ListNodeReserve next = head.next;
         ListNodeReserve new_head = reverseList(next);
-        Object nextValue = next.value;
         next.next = head;
         head.next = null;
         return new_head;
