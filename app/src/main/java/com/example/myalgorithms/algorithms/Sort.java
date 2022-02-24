@@ -1,5 +1,7 @@
 package com.example.myalgorithms.algorithms;
 
+import java.util.Arrays;
+
 /**
  * 排序： 就是将一组对象按照某种逻辑顺序重新排列的过程。比如，订单按照日期排序的这种排序
  * 很可能使用了某种排序算法。
@@ -19,13 +21,16 @@ package com.example.myalgorithms.algorithms;
 public class Sort {
 
     public static void main(String[] args) {
-        int[] arr = {3, 6, 5, 2, 9, 8, 4, 1, 7};
+        int[] arr = {3, 6, 5, 2, 9};
 
-        printArr(arr);
-//        bubbleSort3(arr);
-        insertionSort(arr);
-        System.out.println();
-        printArr(arr);
+        System.out.println(101 & 11232);
+//
+//        printArr(arr);
+//        bubbleSort1(arr);
+////        bubbleSort2(arr);
+////        insertionSort(arr);
+//        System.out.println();
+//        printArr(arr);
     }
 
     private static void printArr(int[] arr) {
@@ -41,31 +46,14 @@ public class Sort {
     /**
      * 冒泡排序 --- 升序
      */
-    private static void bubbleSort(int[] arr) {
+    private static void bubbleSort1(int[] arr) {
         if (arr == null || arr.length < 2) return;
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - 1 - i; j++) {
-                if (arr[i] > arr[i + 1]) {
-                    int t = arr[i];
-                    arr[i] = arr[i + 1];
-                    arr[i + 1] = t;
-                }
-            }
-        }
-    }
-
-
-    /**
-     * 冒泡排序 --- 降序
-     */
-    private static void bubbleSort2(int[] arr) {
-        if (arr == null || arr.length < 2) return;
-        for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - 1 - i; j++) {
-                if (arr[i] < arr[i + 1]) {
-                    int t = arr[i];
-                    arr[i] = arr[i + 1];
-                    arr[i + 1] = t;
+                if (arr[j] > arr[j + 1]) {
+                    int t = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = t;
                 }
             }
         }
@@ -75,7 +63,7 @@ public class Sort {
     /**
      * 冒泡排序 方式2
      */
-    private static void bubbleSort3(int[] arr) {
+    private static void bubbleSort2(int[] arr) {
         if (arr == null || arr.length < 2) return;
         for (int e = arr.length - 1; e > 0; e--) {
             for (int i = 0; i < e; i++) {
@@ -128,6 +116,11 @@ public class Sort {
                 swap(arr, j, j + 1);
             }
         }
+
+        String a = "123";
+        StringBuilder  a1 = new StringBuilder("123");
+        a1.reverse();
+
     }
 
 
@@ -136,4 +129,11 @@ public class Sort {
         arr[i + 1] = arr[i] ^ arr[i + 1];
         arr[i] = arr[i] ^ arr[i + 1];
     }
+
+
+
+
+
+
+
 }

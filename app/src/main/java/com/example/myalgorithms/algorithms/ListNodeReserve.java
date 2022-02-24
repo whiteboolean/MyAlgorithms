@@ -21,9 +21,9 @@ public class ListNodeReserve {
 
         public static void main(String[] args) {
 
-            ListNodeReserve node5 = new ListNodeReserve(5, null);
-            ListNodeReserve node4 = new ListNodeReserve(4, node5);
-            ListNodeReserve node3 = new ListNodeReserve(3, node4);
+//            ListNodeReserve node5 = new ListNodeReserve(5, null);
+//            ListNodeReserve node4 = new ListNodeReserve(4, node5);
+            ListNodeReserve node3 = new ListNodeReserve(3, null);
             ListNodeReserve node2 = new ListNodeReserve(2, node3);
             ListNodeReserve node = new ListNodeReserve(1, node2);
             printListNode(node);
@@ -67,14 +67,45 @@ public class ListNodeReserve {
      *
      *
      * 1 -> 2 -> 3 -> 4 -> 5 -> null
+     * null <- 1 <- 2 <- 3 <- 4 <- 5 < - null
+     *
+     * https://www.bilibili.com/video/BV1YL411c7vn/?spm_id_from=autoNext
      */
     public static ListNodeReserve reverseList(ListNodeReserve head) {
         if (head == null || head.next == null)
             return head;
-        ListNodeReserve next = head.next;
-        ListNodeReserve new_head = reverseList(next);
-        next.next = head;
+        ListNodeReserve new_head = reverseList(head.next);
+        head.next.next = head;
         head.next = null;
         return new_head;
     }
+
+//
+//    public static ListNodeReserve reserveList2(ListNodeReserve head) {
+//        return reserveList(head, null);
+//    }
+//
+//    public static ListNodeReserve reserveList(ListNodeReserve head, ListNodeReserve newHead) {
+//        if (head == null) return newHead;
+//        ListNodeReserve next = head.next;
+//        head.next = newHead;
+//        return reserveList(next, head);
+//    }
+//
+//
+
+
+
+    public ListNodeReserve reverseList3(ListNodeReserve head) {
+        ListNodeReserve newHead = null;
+        while (head != null) {
+            ListNodeReserve temp = head.next;
+            head.next = newHead;
+            newHead = head;
+            head = temp;
+        }
+        return newHead;
+    }
+
+
 }
