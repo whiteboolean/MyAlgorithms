@@ -96,16 +96,6 @@ public class ListNodeReserve {
 
 
 
-    public ListNodeReserve reverseList3(ListNodeReserve head) {
-        ListNodeReserve newHead = null;
-        while (head != null) {
-            ListNodeReserve temp = head.next;
-            head.next = newHead;
-            newHead = head;
-            head = temp;
-        }
-        return newHead;
-    }
 
 
 }
