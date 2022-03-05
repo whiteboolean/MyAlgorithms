@@ -38,4 +38,65 @@ public class P01_链表反转 {
         return head;
     }
 
+
+    /**
+     * 2022年03月05日12:16:38
+     * @param node
+     * @return
+     */
+    private static ListNode reverse3(ListNode node){
+        ListNode prev =  null, next ;
+        ListNode curr = node ;
+        while (curr!=null){
+            next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        return prev;
+    }
+
+    /**
+     * 2022年03月05日12:16:56
+     *
+     * @param node
+     * @return
+     */
+    private static ListNode reverse4(ListNode node){
+        if (node==null || node.next == null) return node;
+        ListNode result = reverse4(node.next);
+        node.next.next = node;
+        node.next = null;
+        return result;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
