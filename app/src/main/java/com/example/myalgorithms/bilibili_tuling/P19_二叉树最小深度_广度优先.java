@@ -22,12 +22,9 @@ public class P19_二叉树最小深度_广度优先 {
      * 时间复杂度 0(N) 每个节点只取一次
      * 空间复杂度 -  取决于树的高度 ，容器的元素 O(N) / O(LogN)
      *
-     *
-     *
      * @param root
      * @return
      */
-
     public static int minDepth1(TreeNode root) {
         if (root == null) {
             return 0;
@@ -52,6 +49,15 @@ public class P19_二叉树最小深度_广度优先 {
         }
         return 0;
     }
+
+
+
+
+
+
+
+
+
 
 
 }

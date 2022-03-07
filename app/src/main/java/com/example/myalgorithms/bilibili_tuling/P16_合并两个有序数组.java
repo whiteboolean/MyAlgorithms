@@ -61,6 +61,16 @@ public class P16_合并两个有序数组 {
         时间复杂度 0(N+M) 空间复杂度 O(N)
 
      */
+
+    /**
+     * 时间复杂度N(N+M) 空间复杂度O(N)
+     *
+     * @param nums1
+     * @param m
+     * @param nums2
+     * @param n
+     * @return
+     */
     public static int[] merge2(int[] nums1, int m, int[] nums2, int n) {
         int p1 = m - 1;
         int p2 = n - 1;

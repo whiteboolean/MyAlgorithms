@@ -29,7 +29,7 @@ public class P17_子数组最大平均数 {
             sum = sum - nums[i - k] + nums[i];
             max = Math.max(sum, max);
         }
-            return 1.0 * max / k;
+        return 1.0 * max / k;
     }
 
 }

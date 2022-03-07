@@ -1,7 +1,5 @@
 package com.example.myalgorithms.bilibili_tuling;
 
-import android.graphics.drawable.Icon;
-
 /**
  * 排列硬币
  * 总共有n枚硬币，将他们排成一个阶梯的形状，第k行就必须正好有k枚硬币。
@@ -72,9 +70,8 @@ public class P14_排列硬币 {
     }
 
     /**
-     *
      * （x² + x )/2 = n
-     *  x = sqrt (2n - x )
+     * x = sqrt (2n - x )
      *
      * @param x
      * @param n

@@ -27,7 +27,7 @@ public class P15_环形链表 {
         ListNode listNode1 = new ListNode(1, listNode2);
 
 //       listNode5.next = listNode3;
-        System.out.println(hasCycle(listNode1));
+        System.out.println(hasCycle1(listNode1));
     }
 
     private static boolean hasCycle(ListNode listNode1) {
@@ -48,11 +48,24 @@ public class P15_环形链表 {
     //快慢指针
     // 快指针一次走两步 ， 慢指针一次走一步
     private static boolean hasCycle1(ListNode head) {
-        if (head == null || head.next ==null) return false;
+        if (head == null || head.next == null) return false;
         ListNode slow = head;
         ListNode fast = head.next;
         while (slow != fast) {
             if (fast == null || fast.next == null) return false;
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        return true;
+    }
+
+    //for practice
+    private static boolean test(ListNode head){
+        if (head ==null || head.next == null) return false;
+        ListNode slow = head;
+        ListNode fast = head.next;
+        while (slow!=fast){
+            if (fast==null || fast.next == null) return false;
             slow = slow.next;
             fast = fast.next.next;
         }
