@@ -1,11 +1,8 @@
-package com.example.myalgorithms.bilibili_tuling;
+package com.example.myalgorithms.bilibili_tuling_practice;
 
 import com.example.myalgorithms.TreeNode;
 
-/**
- * 前序遍历： 根左右
- */
-public class P24_二叉树遍历_前序递归遍历 {
+public class P24_二叉树遍历_中序遍历 {
 
     public static void main(String[] args) {
         TreeNode node7 = new TreeNode(7, null, null);
@@ -15,17 +12,16 @@ public class P24_二叉树遍历_前序递归遍历 {
         TreeNode node3 = new TreeNode(3, null, null);
         TreeNode node2 = new TreeNode(2, node4, node5);
         TreeNode node1 = new TreeNode(1, node2, node3);
-        preorder(node1);
+        midOrder(node1);
     }
 
-
-    public static void preorder(TreeNode root) {
-        if (root == null) {
+    public static void midOrder(TreeNode node){
+        if (node==null){
             return;
         }
-        System.out.println(root.val);
-        preorder(root.left);
-        preorder(root.right);
+        midOrder(node.left);
+        System.out.println(node.val);
+        midOrder(node.right);
     }
 
 }

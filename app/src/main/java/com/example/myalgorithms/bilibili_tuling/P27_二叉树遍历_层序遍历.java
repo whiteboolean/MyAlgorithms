@@ -2,7 +2,10 @@ package com.example.myalgorithms.bilibili_tuling;
 
 import com.example.myalgorithms.TreeNode;
 
-public class P24_二叉树遍历_中序遍历 {
+import java.util.ArrayList;
+
+public class P27_二叉树遍历_层序遍历 {
+
 
     public static void main(String[] args) {
         TreeNode node7 = new TreeNode(7, null, null);
@@ -12,16 +15,22 @@ public class P24_二叉树遍历_中序遍历 {
         TreeNode node3 = new TreeNode(3, null, null);
         TreeNode node2 = new TreeNode(2, node4, node5);
         TreeNode node1 = new TreeNode(1, node2, node3);
-        midOrder(node1);
+        priOrder(node1,1,new ArrayList<>());
     }
 
-    public static void midOrder(TreeNode node){
-        if (node==null){
-            return;
+    public static void priOrder(TreeNode root, int i, ArrayList<Integer> list){
+        if (root ==null){
+            return ;
         }
-        midOrder(node.left);
-        System.out.println(node.val);
-        midOrder(node.right);
-    }
+        int length = list.size();
+        if(length <= i){
+            for(int j = 0;j<=i-length;j++){
+                list.add(length+j,null);
+            }
+        }
+       list.set(i,root.val);
+        priOrder(root.left,2*i, list);
+        priOrder(root.right,2*i+1,list);
 
+    }
 }
