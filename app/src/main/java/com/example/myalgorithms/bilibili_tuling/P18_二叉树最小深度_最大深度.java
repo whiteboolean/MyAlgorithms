@@ -44,8 +44,8 @@ public class P18_二叉树最小深度_最大深度 {
         if (root.left != null) {
             min = Math.min(minDepth(root.left), min);
         }
-        if (root.right!=null){
-            min = Math.min(minDepth(root.right),min);
+        if (root.right != null) {
+            min = Math.min(minDepth(root.right), min);
         }
         return min + 1;
     }

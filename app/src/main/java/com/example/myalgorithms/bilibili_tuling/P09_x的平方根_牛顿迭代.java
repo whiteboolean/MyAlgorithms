@@ -17,26 +17,26 @@ public class P09_x的平方根_牛顿迭代 {
      */
     private static int newton(int x) {
         if (x == 0) return 0;
-        return (int) sqrt(x,x);
+        return (int) sqrt(x, x);
     }
 
 
     /**
-     *  x/n  = n
-     *  (x/n + n) / 2 更趋近于这个结果
+     * x/n  = n
+     * (x/n + n) / 2 更趋近于这个结果
+     *
      * @param n
      * @param x
      * @return
      */
     public static double sqrt(double n, int x) {
-        double res = (n + x / n) / 2;
-        if (res == n) {
-            return n;
+
+        double v = (x/n + n) / 2;
+        if (v == x) {
+            return v;
         } else {
-            return sqrt(res, x);
+            return sqrt(v, x);
         }
-
-
 
 
     }

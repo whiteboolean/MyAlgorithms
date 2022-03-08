@@ -6,6 +6,8 @@ package com.example.myalgorithms.bilibili_tuling;
  * 重点考察： 二分法，牛顿迭代
  * <p>
  * 经典二分法的妙用
+ *
+ * 找平方小于某个数的那个值
  */
 public class P08_x的平方根_二分查找 {
 
@@ -18,9 +20,10 @@ public class P08_x的平方根_二分查找 {
     }
 
 
+
     /**
      * 标准二分法查找
-     *
+     * <p>
      * 时间复杂度为O(log^n)
      */
     public static int standardBinarySearch(int[] arr, int value) {
@@ -58,9 +61,6 @@ public class P08_x的平方根_二分查找 {
         }
         return index;
     }
-
-
-
 
 
 }

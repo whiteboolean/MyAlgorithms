@@ -11,8 +11,9 @@ public class P12_两数之和_有序数组 {
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
         System.out.println(Arrays.toString(twoSearch2(arr, 5)));
-
     }
+
+
 
     private static int[] twoSearch(int[] numbers, int target) {
         for (int i = 0; i < numbers.length; i++) {
@@ -52,7 +53,6 @@ public class P12_两数之和_有序数组 {
                 return new int[]{l, r};
             }
         }
-
         return new int[]{0};
     }
 }

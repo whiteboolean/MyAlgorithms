@@ -50,7 +50,6 @@ public class P10_三个数的最大乘积 {
             } else if (x < min2) {
                 min2 = x;
             }
-
             if (x > max1) {
                 max3 = max2;
                 max2 = max1;

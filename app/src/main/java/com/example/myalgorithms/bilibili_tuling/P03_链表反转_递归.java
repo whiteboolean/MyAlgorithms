@@ -16,6 +16,25 @@ public class P03_链表反转_递归 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     private static ListNode reverse2(ListNode node){
         if (node==null || node.next == null) return node;
         ListNode head = reverse2(node.next);
