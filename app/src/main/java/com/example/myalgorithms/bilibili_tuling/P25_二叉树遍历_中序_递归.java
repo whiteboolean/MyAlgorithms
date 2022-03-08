@@ -23,8 +23,8 @@ public class P25_二叉树遍历_中序_递归 {
         if (root == null) {
             return;
         }
-        System.out.println(root.val);
         preorder(root.left);
+        System.out.println(root.val);
         preorder(root.right);
     }
 

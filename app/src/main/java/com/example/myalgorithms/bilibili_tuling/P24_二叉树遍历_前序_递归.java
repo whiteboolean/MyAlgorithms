@@ -19,8 +19,8 @@ public class P24_二叉树遍历_前序_递归 {
         if (node==null){
             return;
         }
-        midOrder(node.left);
         System.out.println(node.val);
+        midOrder(node.left);
         midOrder(node.right);
     }
 
