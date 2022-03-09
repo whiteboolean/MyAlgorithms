@@ -15,10 +15,9 @@ public class P29_二叉树遍历_中序遍历_迭代 {
         TreeNode node2 = new TreeNode(2, node4, node5);
         TreeNode node1 = new TreeNode(1, node2, node3);
         priOrder(node1);
-
     }
 
-    //左  根   右
+    //左   根   右
     public static void priOrder(TreeNode root) {
         if (root != null) {
             Stack<TreeNode> stack = new Stack<>();

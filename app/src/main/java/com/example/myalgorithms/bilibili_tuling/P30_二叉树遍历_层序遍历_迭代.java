@@ -4,11 +4,7 @@ import com.example.myalgorithms.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
-import java.util.Stack;
 
-/**
- *
- */
 public class P30_二叉树遍历_层序遍历_迭代 {
 
     public static void main(String[] args) {
@@ -20,22 +16,21 @@ public class P30_二叉树遍历_层序遍历_迭代 {
         TreeNode node2 = new TreeNode(2, node4, node5);
         TreeNode node1 = new TreeNode(1, node2, node3);
         priOrder(node1);
-
     }
 
     //层序遍历
     public static void priOrder(TreeNode root) {
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
-        while (!queue.isEmpty()){
+        while (!queue.isEmpty()) {
             TreeNode node = queue.poll();
-            if (node!=null){
+            if (node != null) {
                 System.out.println(node.val);
                 queue.add(node.left);
                 queue.add(node.right);
             }
         }
-
     }
+
 
 }

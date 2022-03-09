@@ -1,4 +1,4 @@
-package com.example.myalgorithms.nk;
+package com.example.myalgorithms.nk.树;
 
 import com.example.myalgorithms.ListNode;
 import com.example.myalgorithms.Node;
